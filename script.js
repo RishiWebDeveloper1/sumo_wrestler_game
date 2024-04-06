@@ -46,8 +46,8 @@ function move1() {
             sumo1.style.transform = "rotate(2deg)";
             rotate1 = true
         }
-        sumo1.style.paddingTop = parseInt(sumo1.style.paddingTop || 85) + 5 + 'px'; // Increment paddingTop
-        sumo2.style.paddingTop = parseInt(sumo2.style.paddingTop || 85) - 5 + 'px'; // Decrement paddingTop
+        sumo1.style.paddingTop = parseInt(sumo1.style.paddingTop || 85) + 10 + 'px'; // Increment paddingTop
+        // sumo2.style.paddingTop = parseInt(sumo2.style.paddingTop || 85) - 5 + 'px'; // Decrement paddingTop
         console.log("suo1", sumo1.style.paddingTop);
         console.log("suo2", sumo2.style.paddingTop);
         button1.style.backgroundColor = "red";
@@ -71,8 +71,8 @@ function move2() {
             sumo2.style.transform = "rotate(182deg)";
             rotate2 = true
         }
-        sumo2.style.paddingTop = parseInt(sumo2.style.paddingTop || 85) + 5 + 'px'; // Decrement paddingTop
-        sumo1.style.paddingTop = parseInt(sumo1.style.paddingTop || 85) - 5 + 'px'; // Increment paddingTop
+        sumo2.style.paddingTop = parseInt(sumo2.style.paddingTop || 85) + 10 + 'px'; // Decrement paddingTop
+        // sumo1.style.paddingTop = parseInt(sumo1.style.paddingTop || 85) - 5 + 'px'; // Increment paddingTop
         console.log("suo1", sumo1.style.paddingTop);
         console.log("suo2", sumo2.style.paddingTop);
         button2.style.backgroundColor = "red";
