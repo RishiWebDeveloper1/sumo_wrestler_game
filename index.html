@@ -4,12 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>XO Game</title>
+    <title>Sumo Wrestler Game</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="script.js">
 </head>
 
-<body>
+<body id="body" onclick="music()">
     <header>
         <div class="logo">Sumo wrestler</div>
         <input type="checkbox" id="nav_check" hidden>
@@ -40,10 +40,9 @@
     </header>
 
     <main>
-        <audio src="sound\neon_bg_song.mp3" autoplay loop preload="auto"></audio>
         <div class="megacontainer">
             <div class="score-board">
-                <div class="buttom" id="button1"onclick="move1()"></div>
+                <div class="buttom" id="button1"onclick="move1(1)"></div>
                 <div class="player" id="playerBox1">
                     <div class="player-name">
                         <div contenteditable="True">Player 1</div>
@@ -74,7 +73,7 @@
                         0
                     </div>
                 </div>
-                <div class="buttom" id="button2" onclick="move2()"></div>
+                <div class="buttom" id="button2" onclick="move1(2)"></div>
             </div>
 
             <div class="container2">

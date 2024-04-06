@@ -28,9 +28,15 @@ else if (boxSize === "300px") {
     sumo2Stop = "235px";
 }
 
+function music() {
+    var bg_song = new Audio('sound/neon_bg_song.mp3');
+    bg_song.play();
+    document.getElementById("body").removeAttribute("onclick")
+}
 
-function move1() {
-    button1.style.backgroundColor = "rgb(190, 6, 6)";
+function move1(move) {
+    if (move == 1) {
+        button1.style.backgroundColor = "rgb(190, 6, 6)";
     if (sumo1.style.paddingTop == sumo1Stop) {
         console.log("sumo1 is stopped");
         winner(1);
@@ -47,15 +53,14 @@ function move1() {
             rotate1 = true
         }
         sumo1.style.paddingTop = parseInt(sumo1.style.paddingTop || 85) + 10 + 'px'; // Increment paddingTop
-        // sumo2.style.paddingTop = parseInt(sumo2.style.paddingTop || 85) - 5 + 'px'; // Decrement paddingTop
+        sumo2.style.paddingTop = parseInt(sumo2.style.paddingTop || 85) - 5 + 'px'; // Decrement paddingTop
         console.log("suo1", sumo1.style.paddingTop);
         console.log("suo2", sumo2.style.paddingTop);
         button1.style.backgroundColor = "red";
     }
-}
-
-function move2() {
-    button2.style.backgroundColor = "rgb(190, 6, 6)";
+    }
+    else if (move == 2) {
+        button2.style.backgroundColor = "rgb(190, 6, 6)";
     if (sumo2.style.paddingTop == sumo2Stop) {
         console.log("sumo2 is stopped");
         winner(2);
@@ -72,10 +77,11 @@ function move2() {
             rotate2 = true
         }
         sumo2.style.paddingTop = parseInt(sumo2.style.paddingTop || 85) + 10 + 'px'; // Decrement paddingTop
-        // sumo1.style.paddingTop = parseInt(sumo1.style.paddingTop || 85) - 5 + 'px'; // Increment paddingTop
+        sumo1.style.paddingTop = parseInt(sumo1.style.paddingTop || 85) - 5 + 'px'; // Increment paddingTop
         console.log("suo1", sumo1.style.paddingTop);
         console.log("suo2", sumo2.style.paddingTop);
         button2.style.backgroundColor = "red";
+    }
     }
 }
 
