@@ -52,7 +52,7 @@ function move1(move) {
             sumo1.style.transform = "rotate(2deg)";
             rotate1 = true
         }
-        sumo1.style.paddingTop = parseInt(sumo1.style.paddingTop || 85) + 10 + 'px'; // Increment paddingTop
+        sumo1.style.paddingTop = parseInt(sumo1.style.paddingTop || 85) + 5 + 'px'; // Increment paddingTop
         sumo2.style.paddingTop = parseInt(sumo2.style.paddingTop || 85) - 5 + 'px'; // Decrement paddingTop
         console.log("suo1", sumo1.style.paddingTop);
         console.log("suo2", sumo2.style.paddingTop);
@@ -76,7 +76,7 @@ function move1(move) {
             sumo2.style.transform = "rotate(182deg)";
             rotate2 = true
         }
-        sumo2.style.paddingTop = parseInt(sumo2.style.paddingTop || 85) + 10 + 'px'; // Decrement paddingTop
+        sumo2.style.paddingTop = parseInt(sumo2.style.paddingTop || 85) + 5 + 'px'; // Decrement paddingTop
         sumo1.style.paddingTop = parseInt(sumo1.style.paddingTop || 85) - 5 + 'px'; // Increment paddingTop
         console.log("suo1", sumo1.style.paddingTop);
         console.log("suo2", sumo2.style.paddingTop);
@@ -103,8 +103,8 @@ function gameReset() {
     sumo1.style.paddingTop = "5px";
     sumo2.style.paddingTop = "5px";
 
-    button1.setAttribute("onclick", "move1()");
-    button2.setAttribute("onclick", "move2()");
+    button1.setAttribute("onclick", "move1(1)");
+    button2.setAttribute("onclick", "move1(2)");
 
     sumo1.style.transform = "rotate(0deg)";
     sumo2.style.transform = "rotate(180deg)";
