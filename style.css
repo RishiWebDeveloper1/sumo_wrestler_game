@@ -206,8 +206,6 @@ header nav ul li a:hover
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    /* background-color: rgb(209, 71, 71);
-    border-radius: 10000px; */
 }
 
 .player-img1 {

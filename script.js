@@ -4,8 +4,8 @@ let button1 = document.getElementById("button1");
 let button2 = document.getElementById("button2");
 let rotate1 = true;
 let rotate2 = true;
-let sumo1Score = document.getElementById("playerScore1")
-let sumo2Score = document.getElementById("playerScore2")
+let sumo1Score = document.getElementById("playerScore1");
+let sumo2Score = document.getElementById("playerScore2");
 let sumo1Count = 0;
 let sumo2Count = 0;
 let sumo1Stop = "0";
@@ -31,7 +31,7 @@ else if (boxSize === "300px") {
 function music() {
     var bg_song = new Audio('sound/neon_bg_song.mp3');
     bg_song.play();
-    document.getElementById("body").removeAttribute("onclick")
+    document.getElementById("body").removeAttribute("onclick");
 }
 
 function move1(move) {
@@ -46,18 +46,18 @@ function move1(move) {
             audio.play();
             if (rotate1 == true) {
                 sumo1.style.transform = "rotate(-2deg)";
-                rotate1 = false
+                rotate1 = false;
             }
             else {
                 sumo1.style.transform = "rotate(2deg)";
-                rotate1 = true
+                rotate1 = true;
             }
-            sumo1.style.paddingTop = parseInt(sumo1.style.paddingTop || 0) + 20 + 'px'; // Increment paddingTop
-            sumo2.style.paddingTop = parseInt(sumo2.style.paddingTop || 0) - 20 + 'px'; // Decrement paddingTop
+            sumo1.style.paddingTop = parseInt(sumo1.style.paddingTop || 0) + 20 + 'px';
+            sumo2.style.paddingTop = parseInt(sumo2.style.paddingTop || 0) - 20 + 'px';
             console.log("suo1", sumo1.style.paddingTop);
             console.log("suo2", sumo2.style.paddingTop);
+            button2.setAttribute("onclick", "move1(2)");
         }
-        button2.setAttribute("onclick", "move1(2)");
     }
     else if (move == 2) {
         button1.removeAttribute("onclick");
@@ -76,12 +76,12 @@ function move1(move) {
                 sumo2.style.transform = "rotate(182deg)";
                 rotate2 = true;
             }
-            sumo2.style.paddingTop = parseInt(sumo2.style.paddingTop || 0) + 20 + 'px'; // Decrement paddingTop
-            sumo1.style.paddingTop = parseInt(sumo1.style.paddingTop || 0) - 20 + 'px'; // Increment paddingTop
+            sumo2.style.paddingTop = parseInt(sumo2.style.paddingTop || 0) + 20 + 'px';
+            sumo1.style.paddingTop = parseInt(sumo1.style.paddingTop || 0) - 20 + 'px';
             console.log("suo1", sumo1.style.paddingTop);
             console.log("suo2", sumo2.style.paddingTop);
+            button1.setAttribute("onclick", "move1(1)");
         }
-        button1.setAttribute("onclick", "move1(1)");
     }
 }
 
