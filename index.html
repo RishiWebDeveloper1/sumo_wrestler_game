@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sumo Wrestler Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body id="body" onclick="music()">
+    <header>
+        <div class="logo">Sumo wrestler</div>
+        <input type="checkbox" id="nav_check" hidden>
+        <nav>
+            <ul>
+                <li style=" width: 50px;">
+                    <a href="../index.html" class="active" style=" width: 40px;">HoMe</a>
+                </li>
+                <li style="width: 58px;">
+                    <a href="../html/contact.html" style="width: 48px;">Event</a>
+                </li>
+                <li style="width: 55px;">
+                    <a href="../html/about.html" style="width: 45px;">About</a>
+                </li>
+                <li style="width: 45px;">
+                    <a href="../html/help.html" style="width: 35px;">More</a>
+                </li>
+                <!-- <li>
+                    <a href="">About</a>
+                </li> -->
+            </ul>
+        </nav>
+        <label for="nav_check" class="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </label>
+    </header>
+
+    <main>
+        <div class="megacontainer">
+            <div class="score-board">
+                <div class="buttom" id="button1" onclick="move1(1)"></div>
+                <div class="player" id="playerBox1">
+                    <div class="player-name">
+                        <div contenteditable="True">Player 1</div>
+                    </div>
+                    <div class="score" id="playerScore1">
+                        0
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="mainBox" id="boxSize">
+                    <div class="circle">
+                        <div class="player-img1" id="playerImg1">
+                            <img class="sumo-img" src="images/sumo.png" alt="Sumo Wrestler1">
+                        </div>
+                        <div class="player-img2" id="playerImg2">
+                            <img class="sumo-img" src="images/sumo.png" alt="Sumo Wrestler2">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="score-board">
+                <div class="player" id="playerBox2">
+                    <div class="player-name">
+                        <div contenteditable="True">Player 2</div>
+                    </div>
+                    <div class="score" id="playerScore2">
+                        0
+                    </div>
+                </div>
+                <div class="buttom" id="button2" onclick="move1(2)"></div>
+            </div>
+
+            <div class="container2">
+                <div class="result-show">
+                    <div class="winner-image" id="winImg">
+                        <!-- <img src="images\cross.png" alt=""> -->
+                    </div>
+                    <div class="winner-name" id="winName">
+                    </div>
+                </div>
+                <div class="button-box">
+                    <div class="button" onclick="gameReset()">
+                        <div>Rematch</div>
+                    </div>
+                    <a href="bot.html">
+                        <div class="button bot" onclick="changeMode()">
+                            <div><img class="bot-img" src="images\bot_icon.webp" alt="Bot"></div>
+                        </div>
+                    </a>
+
+                    <div class="button restart" onclick="gameRestart()">
+                        <div>Restart</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
