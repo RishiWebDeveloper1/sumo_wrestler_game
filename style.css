@@ -64,7 +64,9 @@ header nav ul li a {
 
 .bar a:hover,
 header nav ul li a:hover
-/* header nav ul li a.active */ {
+
+/* header nav ul li a.active */
+    {
     border-bottom-color: black;
 }
 
@@ -210,12 +212,12 @@ header nav ul li a:hover
 
 .player-img1 {
     width: 60px;
-    padding-top: 85px;
+    padding-top: 0px;
 }
 
 .player-img2 {
     width: 60px;
-    padding-top: 85px;
+    padding-top: 0px;
     transform: rotate(180deg);
 }
 
