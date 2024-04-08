@@ -37,6 +37,7 @@ header {
     align-items: center;
     justify-content: space-between;
     padding: 0 50px;
+    z-index: 10;
 }
 
 header .logo {
