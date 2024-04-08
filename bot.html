@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sumo Wrestler Game</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="bot-css.css">
 </head>
 
 <body id="body" onclick="music()">
@@ -41,10 +41,16 @@
     <main>
         <div class="megacontainer">
             <div class="score-board">
-                <div class="buttom" id="button1" onclick="move1(1)"></div>
+                <div class="game-mode" id="gameMode" onclick="changeMode()">
+                    <div>Easy</div>
+                </div>
+                <div class="buttom" id="button1">
+                    <img class="bot-img" src="images/bot_icon.webp" alt="bot">
+                </div>
                 <div class="player" id="playerBox1">
                     <div class="player-name">
-                        <div contenteditable="True">Player 1</div>
+                        <div>Bot</div>
+                        <div contenteditable="True"></div>
                     </div>
                     <div class="score" id="playerScore1">
                         0
@@ -72,7 +78,7 @@
                         0
                     </div>
                 </div>
-                <div class="buttom" id="button2" onclick="move1(2)"></div>
+                <div class="buttom" id="button2" onclick="move()"></div>
             </div>
 
             <div class="container2">
@@ -87,12 +93,11 @@
                     <div class="button" onclick="gameReset()">
                         <div>Rematch</div>
                     </div>
-                    <a href="bot.html">
+                    <a href="index.html">
                         <div class="button bot" onclick="changeMode()">
-                            <div><img class="bot-img" src="images\bot_icon.webp" alt="Bot"></div>
+                            <div><img class="bot-img" src="images\multiplayer_icon.png" alt="Bot"></div>
                         </div>
                     </a>
-
                     <div class="button restart" onclick="gameRestart()">
                         <div>Restart</div>
                     </div>
@@ -102,7 +107,7 @@
         </div>
     </main>
 
-    <script src="script.js"></script>
+    <script src="js\bot_Mode.js"></script>
 
 </body>
 

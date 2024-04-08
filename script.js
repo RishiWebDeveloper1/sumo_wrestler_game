@@ -28,6 +28,22 @@ else if (boxSize === "300px") {
     sumo2Stop = "240px";
 }
 
+function changeMode() {
+    let currentMode = document.getElementById("changeMode");
+    
+    mode = currentMode.getAttribute("src");
+    console.log(mode);
+    if (mode == "js/bot_Mode.js") {
+        currentMode.setAttribute("src", "script.js");
+        console.log(mode);
+    }
+    else {
+        currentMode.setAttribute("src", "js/bot_Mode.js");
+        console.log(mode);
+    }
+    console.log(mode);
+}
+
 function music() {
     var bg_song = new Audio('sound/neon_bg_song.mp3');
     bg_song.play();
@@ -52,8 +68,8 @@ function move1(move) {
                 sumo1.style.transform = "rotate(2deg)";
                 rotate1 = true;
             }
-            sumo1.style.paddingTop = parseInt(sumo1.style.paddingTop || 0) + 20 + 'px';
-            sumo2.style.paddingTop = parseInt(sumo2.style.paddingTop || 0) - 20 + 'px';
+            sumo1.style.paddingTop = parseInt(sumo1.style.paddingTop || 0) + 10 + 'px';
+            sumo2.style.paddingTop = parseInt(sumo2.style.paddingTop || 0) - 10 + 'px';
             console.log("suo1", sumo1.style.paddingTop);
             console.log("suo2", sumo2.style.paddingTop);
             button2.setAttribute("onclick", "move1(2)");
@@ -76,8 +92,8 @@ function move1(move) {
                 sumo2.style.transform = "rotate(182deg)";
                 rotate2 = true;
             }
-            sumo2.style.paddingTop = parseInt(sumo2.style.paddingTop || 0) + 20 + 'px';
-            sumo1.style.paddingTop = parseInt(sumo1.style.paddingTop || 0) - 20 + 'px';
+            sumo2.style.paddingTop = parseInt(sumo2.style.paddingTop || 0) + 10 + 'px';
+            sumo1.style.paddingTop = parseInt(sumo1.style.paddingTop || 0) - 10 + 'px';
             console.log("suo1", sumo1.style.paddingTop);
             console.log("suo2", sumo2.style.paddingTop);
             button1.setAttribute("onclick", "move1(1)");
