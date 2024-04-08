@@ -16,16 +16,16 @@ boxSize = boxSize.width;
 console.log(boxSize);
 
 if (boxSize === "500px") {
-    sumo1Stop = "405px";
-    sumo2Stop = "405px";
+    sumo1Stop = "410px";
+    sumo2Stop = "410px";
 }
 else if (boxSize === "400px") {
-    sumo1Stop = "315px";
-    sumo2Stop = "315px";
+    sumo1Stop = "320px";
+    sumo2Stop = "320px";
 }
 else if (boxSize === "300px") {
-    sumo1Stop = "235px";
-    sumo2Stop = "235px";
+    sumo1Stop = "240px";
+    sumo2Stop = "240px";
 }
 
 function music() {
@@ -36,52 +36,52 @@ function music() {
 
 function move1(move) {
     if (move == 1) {
-        button1.style.backgroundColor = "rgb(190, 6, 6)";
-    if (sumo1.style.paddingTop == sumo1Stop) {
-        console.log("sumo1 is stopped");
-        winner(1);
-    }
-    else {
-        var audio = new Audio('sound/figth_sound.mp3');
-        audio.play();
-        if (rotate1 == true) {
-            sumo1.style.transform = "rotate(-2deg)";
-            rotate1 = false
+        button2.removeAttribute("onClick");
+        if (sumo1.style.paddingTop == sumo1Stop) {
+            console.log("sumo1 is stopped");
+            winner(1);
         }
         else {
-            sumo1.style.transform = "rotate(2deg)";
-            rotate1 = true
+            var audio = new Audio('sound/figth_sound.mp3');
+            audio.play();
+            if (rotate1 == true) {
+                sumo1.style.transform = "rotate(-2deg)";
+                rotate1 = false
+            }
+            else {
+                sumo1.style.transform = "rotate(2deg)";
+                rotate1 = true
+            }
+            sumo1.style.paddingTop = parseInt(sumo1.style.paddingTop || 0) + 20 + 'px'; // Increment paddingTop
+            sumo2.style.paddingTop = parseInt(sumo2.style.paddingTop || 0) - 20 + 'px'; // Decrement paddingTop
+            console.log("suo1", sumo1.style.paddingTop);
+            console.log("suo2", sumo2.style.paddingTop);
         }
-        sumo1.style.paddingTop = parseInt(sumo1.style.paddingTop || 85) + 5 + 'px'; // Increment paddingTop
-        sumo2.style.paddingTop = parseInt(sumo2.style.paddingTop || 85) - 5 + 'px'; // Decrement paddingTop
-        console.log("suo1", sumo1.style.paddingTop);
-        console.log("suo2", sumo2.style.paddingTop);
-        button1.style.backgroundColor = "red";
-    }
+        button2.setAttribute("onclick", "move1(2)");
     }
     else if (move == 2) {
-        button2.style.backgroundColor = "rgb(190, 6, 6)";
-    if (sumo2.style.paddingTop == sumo2Stop) {
-        console.log("sumo2 is stopped");
-        winner(2);
-    }
-    else {
-        var audio = new Audio('sound/figth_sound.mp3');
-        audio.play();
-        if (rotate2 == true) {
-            sumo2.style.transform = "rotate(-182deg)";
-            rotate2 = false
+        button1.removeAttribute("onclick");
+        if (sumo2.style.paddingTop == sumo2Stop) {
+            console.log("sumo2 is stopped");
+            winner(2);
         }
         else {
-            sumo2.style.transform = "rotate(182deg)";
-            rotate2 = true
+            var audio = new Audio('sound/figth_sound.mp3');
+            audio.play();
+            if (rotate2 == true) {
+                sumo2.style.transform = "rotate(-182deg)";
+                rotate2 = false;
+            }
+            else {
+                sumo2.style.transform = "rotate(182deg)";
+                rotate2 = true;
+            }
+            sumo2.style.paddingTop = parseInt(sumo2.style.paddingTop || 0) + 20 + 'px'; // Decrement paddingTop
+            sumo1.style.paddingTop = parseInt(sumo1.style.paddingTop || 0) - 20 + 'px'; // Increment paddingTop
+            console.log("suo1", sumo1.style.paddingTop);
+            console.log("suo2", sumo2.style.paddingTop);
         }
-        sumo2.style.paddingTop = parseInt(sumo2.style.paddingTop || 85) + 5 + 'px'; // Decrement paddingTop
-        sumo1.style.paddingTop = parseInt(sumo1.style.paddingTop || 85) - 5 + 'px'; // Increment paddingTop
-        console.log("suo1", sumo1.style.paddingTop);
-        console.log("suo2", sumo2.style.paddingTop);
-        button2.style.backgroundColor = "red";
-    }
+        button1.setAttribute("onclick", "move1(1)");
     }
 }
 
@@ -100,8 +100,8 @@ function winner(winner) {
 }
 
 function gameReset() {
-    sumo1.style.paddingTop = "5px";
-    sumo2.style.paddingTop = "5px";
+    sumo1.style.paddingTop = "0px";
+    sumo2.style.paddingTop = "0px";
 
     button1.setAttribute("onclick", "move1(1)");
     button2.setAttribute("onclick", "move1(2)");
