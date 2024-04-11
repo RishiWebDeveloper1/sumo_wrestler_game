@@ -309,8 +309,8 @@ header nav ul li a:hover
 
 @media only screen and (max-width: 600px) {
     .container {
-        width: 500px;
-        height: 500px;
+        width: 425px;
+        height: 425px;
     }
 
     .mainBox {
@@ -345,8 +345,8 @@ header nav ul li a:hover
 
 @media only screen and (max-width: 505px) {
     .container {
-        width: 400px;
-        height: 400px;
+        width: 325px;
+        height: 325px;
     }
 
     .mainBox {
@@ -375,17 +375,13 @@ header nav ul li a:hover
     /* ********* Button ********** */
 
     .button-box {
-        width: 400px;
+        width: 370px;
     }
 }
 
 @media only screen and (min-width: 1000px) {
     .megacontainer {
-        padding-top: 100px;
-    }
-
-    .score-board {
-        justify-content: flex-start;
+        padding-top: 10px;
     }
 
     .player {

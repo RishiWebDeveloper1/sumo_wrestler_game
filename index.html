@@ -3,9 +3,51 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords"
+        content="sumo wrestler, sumo wrestler game, sumo wrestling, sumo game, wrestling game, giant wrestlers, battle game, ring fight, strength and skill, epic clash, competitive gaming, strategy game, tactical combat, intense competition, victory challenge">
+    <meta name="description"
+        content="Prepare for an epic clash in the ring as colossal sumo wrestlers engage in a fierce battle for supremacy! Experience the intensity of Sumo Showdown">
+    <meta name="robots" content="index, follow"> <!-- Control search engine indexing behavior -->
+    <meta name="author" content="Sumo Wrestler Game">
+    <meta name="language" content="English">
+    <meta name="category" content="Games">
+    <meta name="referrer" content="origin">
+    <meta name="copyright" content="2024, Rishi Vishwakarma [Developer]">
+    <meta name="generator" content="Rishi Vishwakarma [Developer]">
+    <meta name="revised" content="2024-04-04">
+    <meta name="distribution" content="global">
+    <meta name="rating" content="General">
+    <meta name="theme-color" content="#ffffff"> <!-- Define theme color for mobile browsers -->
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Sumo Wrestler">
+    <meta property="og:description"
+        content="Prepare for an epic clash in the ring as colossal sumo wrestlers engage in a fierce battle for supremacy! Experience the intensity of Sumo Showdown">
+    <meta property="og:image" content="https://rishiwebdeveloper1.github.io/sumo_wrestler_game/images/sumo.png">
+    <meta property="og:url" content="https://rishiwebdeveloper1.github.io/sumo_wrestler_game/">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="Sumo Wrestler">
+    <meta property="twitter:description"
+        content="Prepare for an epic clash in the ring as colossal sumo wrestlers engage in a fierce battle for supremacy! Experience the intensity of Sumo Showdown">
+    <meta property="twitter:image" content="https://rishiwebdeveloper1.github.io/sumo_wrestler_game/images/sumo.png">
+
+    <!-- WhatsApp -->
+    <meta property="og:site_name" content="Sumo Wrestler">
+    <meta property="og:title" content="Sumo Wrestler">
+    <meta property="og:description"
+        content="Prepare for an epic clash in the ring as colossal sumo wrestlers engage in a fierce battle for supremacy! Experience the intensity of Sumo Showdown">
+    <meta property="og:image" content="https://rishiwebdeveloper1.github.io/sumo_wrestler_game/images/sumo.png">
+    <meta property="og:url" content="https://rishiwebdeveloper1.github.io/sumo_wrestler_game/">
+    <meta property="og:type" content="website">
+    <meta property="og:whatsapp" content="send">
+
     <title>Sumo Wrestler Game</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="bot-css.css">
 </head>
 
 <body id="body" onclick="music()">
@@ -26,9 +68,6 @@
                 <li style="width: 45px;">
                     <a href="../html/help.html" style="width: 35px;">More</a>
                 </li>
-                <!-- <li>
-                    <a href="">About</a>
-                </li> -->
             </ul>
         </nav>
         <label for="nav_check" class="hamburger">
@@ -41,10 +80,16 @@
     <main>
         <div class="megacontainer">
             <div class="score-board">
-                <div class="buttom" id="button1" onclick="move1(1)"></div>
+                <div class="game-mode" id="gameMode" onclick="changeMode()">
+                    <div>Easy</div>
+                </div>
+                <div class="buttom" id="button1">
+                    <img class="bot-img" src="images/bot_icon.webp" alt="bot">
+                </div>
                 <div class="player" id="playerBox1">
                     <div class="player-name">
-                        <div contenteditable="True">Player 1</div>
+                        <div>Bot</div>
+                        <div contenteditable="True"></div>
                     </div>
                     <div class="score" id="playerScore1">
                         0
@@ -72,37 +117,35 @@
                         0
                     </div>
                 </div>
-                <div class="buttom" id="button2" onclick="move1(2)"></div>
+                <div class="buttom" id="button2" onclick="move()"></div>
             </div>
 
             <div class="container2">
                 <div class="result-show">
-                    <div class="winner-image" id="winImg">
-                        <!-- <img src="images\cross.png" alt=""> -->
+                    <!-- <div class="winner-image" id="winImg">
                     </div>
                     <div class="winner-name" id="winName">
                     </div>
-                </div>
-                <div class="button-box">
-                    <div class="button" onclick="gameReset()">
-                        <div>Rematch</div>
-                    </div>
-                    <a href="bot.html">
-                        <div class="button bot" onclick="changeMode()">
-                            <div><img class="bot-img" src="images\bot_icon.webp" alt="Bot"></div>
+                </div> -->
+                    <div class="button-box">
+                        <div class="button" onclick="gameReset()">
+                            <div>Rematch</div>
                         </div>
-                    </a>
-
-                    <div class="button restart" onclick="gameRestart()">
-                        <div>Restart</div>
+                        <a href="multiplayer.html">
+                            <div class="button bot" onclick="changeMode()">
+                                <div><img class="bot-img" src="images\multiplayer_icon.png" alt="Bot"></div>
+                            </div>
+                        </a>
+                        <div class="button restart" onclick="gameRestart()">
+                            <div>Restart</div>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-        </div>
+            </div>
     </main>
 
-    <script src="script.js"></script>
+    <script src="js\bot_Mode.js"></script>
 
 </body>
 
